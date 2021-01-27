@@ -159,6 +159,13 @@ export const Result = styled.div`
     left: 50%;
     transform: translateX(-50%);
 
+    @media (max-width: 1450px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     input {
         font-family: 'Roboto', sans-serif;
         color: #333;
@@ -167,28 +174,36 @@ export const Result = styled.div`
         border: 2px solid #333;
         font-size: 16px;
         border-radius: 8px;
+        margin-right: 12px;
+    }
+
+    div {
+        display: inline-block;
+        @media (max-width: 1450px) {
+            margin-top: 12px;
+        }
     }
 
     button {
         width: 100px;
         padding: 8px 16px;
-        background: #e46511;
+        background: #999;
         color: #fff;
         border: 2px solid #333;
         border-radius: 8px;
         font-family: 'Roboto', sans-serif;
-        margin-right: 12px;
 
         &:hover {
-            background: #f4a895;
-        }
-
-        &:first-child {
-            background: #999;
-        }
-
-        &:first-child:hover {
             background: #bbb;
+        }
+
+        &:last-child {
+            background: #e46511;
+            margin-left: 12px;
+        }
+
+        &:last-child:hover {
+            background: #f4a895;
         }
     }
 `;

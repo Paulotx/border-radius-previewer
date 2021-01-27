@@ -641,18 +641,19 @@ const BorderRadius: React.FC = () => {
             </Container>
 
             <Result>
-                <button type="button" onClick={handleReset}>
-                    Resetar
-                </button>
-                <button type="button" onClick={handleCopy}>
-                    Copiar
-                </button>
-
                 <input
                     ref={ref}
                     type="text"
                     value={`border-radius: ${borderRadius}`}
                 />
+                <div>
+                    <button type="button" onClick={handleReset}>
+                        Resetar
+                    </button>
+                    <button type="button" onClick={handleCopy}>
+                        Copiar
+                    </button>
+                </div>
             </Result>
         </>
     );
