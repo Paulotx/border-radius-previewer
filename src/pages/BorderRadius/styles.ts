@@ -23,8 +23,8 @@ export const Container = styled.div`
     justify-content: space-between;
 
     .area-container {
-        width: 480px;
-        height: 480px;
+        width: 380px;
+        height: 380px;
 
         position: relative;
         display: flex;
@@ -84,7 +84,7 @@ export const Container = styled.div`
         height: 100px;
 
         &.bar-horizontal {
-            width: 380px;
+            width: 280px;
             height: 3px;
             left: 50%;
             transform: translateX(-50%);
@@ -92,7 +92,7 @@ export const Container = styled.div`
 
         &.bar-vertical {
             width: 3px;
-            height: 380px;
+            height: 280px;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -145,8 +145,8 @@ export const Container = styled.div`
 `;
 
 export const Photo = styled.div<IPhotoProps>`
-    width: 420px;
-    height: 420px;
+    width: 330px;
+    height: 330px;
     background: url(${bg}) center center no-repeat;
     background-size: cover;
     border: 8px solid #e46511;

@@ -67,7 +67,7 @@ const BorderRadius: React.FC = () => {
 
             e.currentTarget.value = value;
             setTopLeftRX(Number(value));
-            setMouseTopXLeft((380 * Number(value)) / 100 - 16);
+            setMouseTopXLeft((280 * Number(value)) / 100 - 16);
         },
         [],
     );
@@ -89,7 +89,7 @@ const BorderRadius: React.FC = () => {
 
             e.currentTarget.value = value;
             setTopRightRX(Number(value));
-            setMouseTopXRight((380 * Number(value)) / 100 - 16);
+            setMouseTopXRight((280 * Number(value)) / 100 - 16);
         },
         [],
     );
@@ -111,7 +111,7 @@ const BorderRadius: React.FC = () => {
 
             e.currentTarget.value = value;
             setBottomLeftRX(Number(value));
-            setMouseBottomXLeft((380 * Number(value)) / 100 - 16);
+            setMouseBottomXLeft((280 * Number(value)) / 100 - 16);
         },
         [],
     );
@@ -133,7 +133,7 @@ const BorderRadius: React.FC = () => {
 
             e.currentTarget.value = value;
             setBottomRightRX(Number(value));
-            setMouseBottomXRight((380 * Number(value)) / 100 - 16);
+            setMouseBottomXRight((280 * Number(value)) / 100 - 16);
         },
         [],
     );
@@ -155,7 +155,7 @@ const BorderRadius: React.FC = () => {
 
             e.currentTarget.value = value;
             setTopRightRY(Number(value));
-            setMouseTopYRight((380 * Number(value)) / 100 - 16);
+            setMouseTopYRight((280 * Number(value)) / 100 - 16);
         },
         [],
     );
@@ -177,7 +177,7 @@ const BorderRadius: React.FC = () => {
 
             e.currentTarget.value = value;
             setBottomRightRY(Number(value));
-            setMouseBottomYRight((380 * Number(value)) / 100 - 16);
+            setMouseBottomYRight((280 * Number(value)) / 100 - 16);
         },
         [],
     );
@@ -199,7 +199,7 @@ const BorderRadius: React.FC = () => {
 
             e.currentTarget.value = value;
             setTopLeftRY(Number(value));
-            setMouseTopYLeft((380 * Number(value)) / 100 - 16);
+            setMouseTopYLeft((280 * Number(value)) / 100 - 16);
         },
         [],
     );
@@ -221,7 +221,7 @@ const BorderRadius: React.FC = () => {
 
             e.currentTarget.value = value;
             setBottomLeftRY(Number(value));
-            setMouseBottomYLeft((380 * Number(value)) / 100 - 16);
+            setMouseBottomYLeft((280 * Number(value)) / 100 - 16);
         },
         [],
     );
@@ -285,7 +285,7 @@ const BorderRadius: React.FC = () => {
                             event.currentTarget.parentElement?.offsetLeft;
                     }
 
-                    let mouseX = offsetLeft + 430 - event.pageX;
+                    let mouseX = offsetLeft + 330 - event.pageX;
                     const width = event.currentTarget.clientWidth;
 
                     if (mouseX < 0) {
@@ -309,7 +309,7 @@ const BorderRadius: React.FC = () => {
                             event.currentTarget.parentElement?.offsetLeft;
                     }
 
-                    let mouseX = offsetLeft + 430 - event.pageX;
+                    let mouseX = offsetLeft + 330 - event.pageX;
                     const width = event.currentTarget.clientWidth;
 
                     if (mouseX < 0) {
@@ -381,7 +381,7 @@ const BorderRadius: React.FC = () => {
                             event.currentTarget.parentElement?.offsetTop;
                     }
 
-                    let mouseY = offsetTop + 430 - event.pageY;
+                    let mouseY = offsetTop + 330 - event.pageY;
                     const height = event.currentTarget.clientHeight;
 
                     if (mouseY < 0) {
@@ -405,7 +405,7 @@ const BorderRadius: React.FC = () => {
                             event.currentTarget.parentElement?.offsetTop;
                     }
 
-                    let mouseY = offsetTop + 430 - event.pageY;
+                    let mouseY = offsetTop + 330 - event.pageY;
                     const height = event.currentTarget.clientHeight;
 
                     if (mouseY < 0) {
