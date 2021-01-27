@@ -12,6 +12,10 @@ export default createGlobalStyle`
         outline: 0
     }
 
+    html, body, #root {
+        height: 100vh;
+    }
+
     body {
         -webkit-font-smoothing: antialiased;
         background: #EEE;

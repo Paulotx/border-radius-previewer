@@ -6,17 +6,24 @@ interface IPhotoProps {
     borderRadius: string;
 }
 
+export const AppContainer = styled.div`
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+`;
+
 export const Title = styled.h2`
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 28px;
     color: #333;
-    margin-top: 32px;
+    margin-top: 24px;
 `;
 
 export const Container = styled.div`
-    margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,10 +161,8 @@ export const Photo = styled.div<IPhotoProps>`
 `;
 
 export const Result = styled.div`
-    bottom: 24px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 24px;
+    margin-top: 32px;
 
     @media (max-width: 1450px) {
         display: flex;

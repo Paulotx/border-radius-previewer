@@ -6,7 +6,7 @@ import React, {
     useRef,
 } from 'react';
 
-import { Container, Photo, Title, Result } from './styles';
+import { AppContainer, Container, Photo, Title, Result } from './styles';
 
 interface ISelected {
     isSelected: boolean;
@@ -465,7 +465,7 @@ const BorderRadius: React.FC = () => {
     }, []);
 
     return (
-        <>
+        <AppContainer>
             <Title>Border-radius Previewer</Title>
             <Container onMouseUp={handleMouseUp}>
                 <div className="area-container">
@@ -655,7 +655,7 @@ const BorderRadius: React.FC = () => {
                     </button>
                 </div>
             </Result>
-        </>
+        </AppContainer>
     );
 };
 
