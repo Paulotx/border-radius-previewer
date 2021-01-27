@@ -11,7 +11,6 @@ export const AppContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 `;
 
 export const Title = styled.h2`
@@ -23,11 +22,30 @@ export const Title = styled.h2`
     margin-top: 24px;
 `;
 
+export const Content = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (max-width: 1380px) {
+        flex-direction: column;
+    }
+`;
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-left: 70px;
+
+    @media (max-width: 1380px) {
+        margin-left: 0;
+    }
 
     .area-container {
         width: 380px;
@@ -164,11 +182,12 @@ export const Result = styled.div`
     margin-bottom: 24px;
     margin-top: 32px;
 
-    @media (max-width: 1450px) {
+    @media (max-width: 1480px) {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 100px;
     }
 
     input {
@@ -184,8 +203,9 @@ export const Result = styled.div`
 
     div {
         display: inline-block;
-        @media (max-width: 1450px) {
-            margin-top: 12px;
+
+        @media (max-width: 1480px) {
+            margin-bottom: 12px;
         }
     }
 
@@ -205,6 +225,7 @@ export const Result = styled.div`
         &:last-child {
             background: #e46511;
             margin-left: 12px;
+            margin-right: 12px;
         }
 
         &:last-child:hover {
