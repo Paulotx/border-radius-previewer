@@ -16,7 +16,7 @@ export const Title = styled.h2`
 `;
 
 export const Container = styled.div`
-    height: 100%;
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,9 +154,10 @@ export const Photo = styled.div<IPhotoProps>`
 `;
 
 export const Result = styled.div`
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
+    bottom: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
     input {
         font-family: 'Roboto', sans-serif;

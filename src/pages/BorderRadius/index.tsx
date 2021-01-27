@@ -466,9 +466,8 @@ const BorderRadius: React.FC = () => {
 
     return (
         <>
+            <Title>Border-radius Previewer</Title>
             <Container onMouseUp={handleMouseUp}>
-                <Title>Border-radius Previewer</Title>
-
                 <div className="area-container">
                     <input
                         type="text"
@@ -639,22 +638,22 @@ const BorderRadius: React.FC = () => {
                         </div>
                     </div>
                 </div>
-
-                <Result>
-                    <button type="button" onClick={handleReset}>
-                        Resetar
-                    </button>
-                    <button type="button" onClick={handleCopy}>
-                        Copiar
-                    </button>
-
-                    <input
-                        ref={ref}
-                        type="text"
-                        value={`border-radius: ${borderRadius}`}
-                    />
-                </Result>
             </Container>
+
+            <Result>
+                <button type="button" onClick={handleReset}>
+                    Resetar
+                </button>
+                <button type="button" onClick={handleCopy}>
+                    Copiar
+                </button>
+
+                <input
+                    ref={ref}
+                    type="text"
+                    value={`border-radius: ${borderRadius}`}
+                />
+            </Result>
         </>
     );
 };
