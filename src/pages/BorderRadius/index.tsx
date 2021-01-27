@@ -442,8 +442,6 @@ const BorderRadius: React.FC = () => {
     const handleCopy = useCallback(() => {
         ref.current?.select();
         document.execCommand('copy');
-
-        alert('Border Radius copiado');
     }, []);
 
     const handleReset = useCallback(() => {
