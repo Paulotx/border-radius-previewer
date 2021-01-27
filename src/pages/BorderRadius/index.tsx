@@ -6,14 +6,7 @@ import React, {
     useRef,
 } from 'react';
 
-import {
-    AppContainer,
-    Container,
-    Photo,
-    Title,
-    Result,
-    Content,
-} from './styles';
+import { AppContainer, Container, Photo, Result } from './styles';
 
 interface ISelected {
     isSelected: boolean;
@@ -473,206 +466,199 @@ const BorderRadius: React.FC = () => {
 
     return (
         <AppContainer>
-            <Title>Border-radius Previewer</Title>
-            <Content>
-                <Result>
-                    <div>
-                        <button type="button" onClick={handleReset}>
-                            Resetar
-                        </button>
-                        <button type="button" onClick={handleCopy}>
-                            Copiar
-                        </button>
-                    </div>
+            <Container onMouseUp={handleMouseUp}>
+                <div className="area-container">
                     <input
-                        ref={ref}
                         type="text"
-                        value={`border-radius: ${borderRadius}`}
+                        value={topLeftRX}
+                        className="input-top-left-x"
+                        onChange={event => handleSetMouseTopLeftX(event)}
                     />
-                </Result>
-                <Container onMouseUp={handleMouseUp}>
-                    <div className="area-container">
-                        <input
-                            type="text"
-                            value={topLeftRX}
-                            className="input-top-left-x"
-                            onChange={event => handleSetMouseTopLeftX(event)}
-                        />
-                        <input
-                            type="text"
-                            value={topRightRX}
-                            className="input-top-right-x"
-                            onChange={event => handleSetMouseTopRightX(event)}
-                        />
-                        <input
-                            type="text"
-                            value={topRightRY}
-                            className="input-top-right-y"
-                            onChange={event => handleSetMousetopRightY(event)}
-                        />
-                        <input
-                            type="text"
-                            value={bottomRightRY}
-                            className="input-bottom-right-y"
-                            onChange={event =>
-                                handleSetMouseBottomRightY(event)
-                            }
-                        />
-                        <input
-                            type="text"
-                            value={bottomRightRX}
-                            className="input-bottom-right-x"
-                            onChange={event =>
-                                handleSetMouseBottomRightX(event)
-                            }
-                        />
-                        <input
-                            type="text"
-                            value={bottomLeftRX}
-                            className="input-bottom-left-x"
-                            onChange={event => handleSetMouseBottomLeftX(event)}
-                        />
-                        <input
-                            type="text"
-                            value={bottomLeftRY}
-                            className="input-bottom-left-y"
-                            onChange={event => handleSetMouseBottomLeftY(event)}
-                        />
-                        <input
-                            type="text"
-                            value={topLeftRY}
-                            className="input-top-left-y"
-                            onChange={event => handleSetMousetopLeftY(event)}
-                        />
+                    <input
+                        type="text"
+                        value={topRightRX}
+                        className="input-top-right-x"
+                        onChange={event => handleSetMouseTopRightX(event)}
+                    />
+                    <input
+                        type="text"
+                        value={topRightRY}
+                        className="input-top-right-y"
+                        onChange={event => handleSetMousetopRightY(event)}
+                    />
+                    <input
+                        type="text"
+                        value={bottomRightRY}
+                        className="input-bottom-right-y"
+                        onChange={event => handleSetMouseBottomRightY(event)}
+                    />
+                    <input
+                        type="text"
+                        value={bottomRightRX}
+                        className="input-bottom-right-x"
+                        onChange={event => handleSetMouseBottomRightX(event)}
+                    />
+                    <input
+                        type="text"
+                        value={bottomLeftRX}
+                        className="input-bottom-left-x"
+                        onChange={event => handleSetMouseBottomLeftX(event)}
+                    />
+                    <input
+                        type="text"
+                        value={bottomLeftRY}
+                        className="input-bottom-left-y"
+                        onChange={event => handleSetMouseBottomLeftY(event)}
+                    />
+                    <input
+                        type="text"
+                        value={topLeftRY}
+                        className="input-top-left-y"
+                        onChange={event => handleSetMousetopLeftY(event)}
+                    />
 
-                        <Photo borderRadius={borderRadius} />
+                    <Photo borderRadius={borderRadius} />
 
-                        <div
-                            className="bar bar-horizontal bar-top"
-                            onMouseMove={event => handleMouseMove(event)}
-                        >
-                            <div className="bar-container">
-                                <button
-                                    type="button"
-                                    onMouseDown={() =>
-                                        handleMouseDown('buttonTopLeftRX')
-                                    }
-                                    onMouseUp={handleMouseUp}
-                                    style={{ left: mouseTopXLeft, top: -14 }}
-                                >
-                                    0
-                                </button>
-                                <button
-                                    type="button"
-                                    onMouseDown={() =>
-                                        handleMouseDown('buttonTopRightRX')
-                                    }
-                                    onMouseUp={handleMouseUp}
-                                    style={{ right: mouseTopXRight, top: -14 }}
-                                >
-                                    0
-                                </button>
-                            </div>
-                        </div>
-
-                        <div
-                            className="bar bar-vertical bar-right"
-                            onMouseMove={event => handleMouseMove(event)}
-                        >
-                            <div className="bar-container">
-                                <button
-                                    type="button"
-                                    onMouseDown={() =>
-                                        handleMouseDown('buttonTopRightRY')
-                                    }
-                                    onMouseUp={handleMouseUp}
-                                    style={{ top: mouseTopYRight, right: -14 }}
-                                >
-                                    0
-                                </button>
-
-                                <button
-                                    type="button"
-                                    onMouseDown={() =>
-                                        handleMouseDown('buttonBottomRightRY')
-                                    }
-                                    onMouseUp={handleMouseUp}
-                                    style={{
-                                        bottom: mouseBottomYRight,
-                                        right: -14,
-                                    }}
-                                >
-                                    0
-                                </button>
-                            </div>
-                        </div>
-
-                        <div
-                            className="bar bar-horizontal bar-bottom"
-                            onMouseMove={event => handleMouseMove(event)}
-                        >
-                            <div className="bar-container">
-                                <button
-                                    type="button"
-                                    onMouseDown={() =>
-                                        handleMouseDown('buttonBottomLeftRX')
-                                    }
-                                    onMouseUp={handleMouseUp}
-                                    style={{ left: mouseBottomXLeft, top: -14 }}
-                                >
-                                    0
-                                </button>
-
-                                <button
-                                    type="button"
-                                    onMouseDown={() =>
-                                        handleMouseDown('buttonBottomRightRX')
-                                    }
-                                    onMouseUp={handleMouseUp}
-                                    style={{
-                                        right: mouseBottomXRight,
-                                        top: -14,
-                                    }}
-                                >
-                                    0
-                                </button>
-                            </div>
-                        </div>
-
-                        <div
-                            className="bar bar-vertical bar-left"
-                            onMouseMove={event => handleMouseMove(event)}
-                        >
-                            <div className="bar-container">
-                                <button
-                                    type="button"
-                                    onMouseDown={() =>
-                                        handleMouseDown('buttonTopLeftRY')
-                                    }
-                                    onMouseUp={handleMouseUp}
-                                    style={{ top: mouseTopYLeft, left: -14 }}
-                                >
-                                    0
-                                </button>
-
-                                <button
-                                    type="button"
-                                    onMouseDown={() =>
-                                        handleMouseDown('buttonBottomLeftRY')
-                                    }
-                                    onMouseUp={handleMouseUp}
-                                    style={{
-                                        bottom: mouseBottomYLeft,
-                                        left: -14,
-                                    }}
-                                >
-                                    0
-                                </button>
-                            </div>
+                    <div
+                        className="bar bar-horizontal bar-top"
+                        onMouseMove={event => handleMouseMove(event)}
+                    >
+                        <div className="bar-container">
+                            <button
+                                type="button"
+                                onMouseDown={() =>
+                                    handleMouseDown('buttonTopLeftRX')
+                                }
+                                onMouseUp={handleMouseUp}
+                                style={{ left: mouseTopXLeft, top: -14 }}
+                            >
+                                0
+                            </button>
+                            <button
+                                type="button"
+                                onMouseDown={() =>
+                                    handleMouseDown('buttonTopRightRX')
+                                }
+                                onMouseUp={handleMouseUp}
+                                style={{ right: mouseTopXRight, top: -14 }}
+                            >
+                                0
+                            </button>
                         </div>
                     </div>
-                </Container>
-            </Content>
+
+                    <div
+                        className="bar bar-vertical bar-right"
+                        onMouseMove={event => handleMouseMove(event)}
+                    >
+                        <div className="bar-container">
+                            <button
+                                type="button"
+                                onMouseDown={() =>
+                                    handleMouseDown('buttonTopRightRY')
+                                }
+                                onMouseUp={handleMouseUp}
+                                style={{ top: mouseTopYRight, right: -14 }}
+                            >
+                                0
+                            </button>
+
+                            <button
+                                type="button"
+                                onMouseDown={() =>
+                                    handleMouseDown('buttonBottomRightRY')
+                                }
+                                onMouseUp={handleMouseUp}
+                                style={{
+                                    bottom: mouseBottomYRight,
+                                    right: -14,
+                                }}
+                            >
+                                0
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        className="bar bar-horizontal bar-bottom"
+                        onMouseMove={event => handleMouseMove(event)}
+                    >
+                        <div className="bar-container">
+                            <button
+                                type="button"
+                                onMouseDown={() =>
+                                    handleMouseDown('buttonBottomLeftRX')
+                                }
+                                onMouseUp={handleMouseUp}
+                                style={{ left: mouseBottomXLeft, top: -14 }}
+                            >
+                                0
+                            </button>
+
+                            <button
+                                type="button"
+                                onMouseDown={() =>
+                                    handleMouseDown('buttonBottomRightRX')
+                                }
+                                onMouseUp={handleMouseUp}
+                                style={{
+                                    right: mouseBottomXRight,
+                                    top: -14,
+                                }}
+                            >
+                                0
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        className="bar bar-vertical bar-left"
+                        onMouseMove={event => handleMouseMove(event)}
+                    >
+                        <div className="bar-container">
+                            <button
+                                type="button"
+                                onMouseDown={() =>
+                                    handleMouseDown('buttonTopLeftRY')
+                                }
+                                onMouseUp={handleMouseUp}
+                                style={{ top: mouseTopYLeft, left: -14 }}
+                            >
+                                0
+                            </button>
+
+                            <button
+                                type="button"
+                                onMouseDown={() =>
+                                    handleMouseDown('buttonBottomLeftRY')
+                                }
+                                onMouseUp={handleMouseUp}
+                                style={{
+                                    bottom: mouseBottomYLeft,
+                                    left: -14,
+                                }}
+                            >
+                                0
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+            <Result>
+                <div>
+                    <button type="button" onClick={handleReset}>
+                        Resetar
+                    </button>
+                    <button type="button" onClick={handleCopy}>
+                        Copiar
+                    </button>
+                </div>
+                <input
+                    ref={ref}
+                    type="text"
+                    value={`border-radius: ${borderRadius}`}
+                />
+            </Result>
         </AppContainer>
     );
 };

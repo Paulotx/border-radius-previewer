@@ -11,40 +11,17 @@ export const AppContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
-
-export const Title = styled.h2`
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    color: #333;
-    margin-top: 24px;
-`;
-
-export const Content = styled.div`
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: absolute;
-
-    top: 50%;
-    transform: translateY(-50%);
-
-    @media (max-width: 1380px) {
-        flex-direction: column;
-    }
 `;
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 70px;
+    margin-top: 100px;
 
-    @media (max-width: 1380px) {
-        margin-left: 0;
+    @media (max-height: 690px) {
+        margin-bottom: 100px;
     }
 
     .area-container {
@@ -187,7 +164,6 @@ export const Result = styled.div`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-bottom: 100px;
     }
 
     input {
