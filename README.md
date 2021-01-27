@@ -1,5 +1,7 @@
 # border-radius-previewer
 
+Check the [Demo here](https://border-radius-previewer-paulotx.netlify.app/)
+
 App made for the challenge [App Ideas](https://github.com/florinpop17/app-ideas)
 
 **Tier:** 1-Beginner
